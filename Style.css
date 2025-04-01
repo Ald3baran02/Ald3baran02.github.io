@@ -68,3 +68,27 @@ footer p {
     margin: 0;
     font-size: 14px;
 }
+
+/* Add responsive design for text boxes */
+input[type="text"], textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Handle overflow for text boxes */
+input[type="text"], textarea {
+    overflow: auto;
+}
+
+/* Ensure text boxes are not out of screen */
+@media (max-width: 768px) {
+    input[type="text"], textarea {
+        width: 100%;
+    }
+}
