@@ -52,11 +52,15 @@ function deleteComment(id) {
             'Authorization': 'Basic ' + btoa(username + ':' + password)
         }
     })
-    .then(() => {
-        // Supprimer le commentaire du DOM
-        const commentElement = document.querySelector(`[data-id="${id}"]`);
-        if (commentElement) {
-            commentElement.remove();
+    .then(response => {
+        if (response.ok) {
+            // Supprimer le commentaire du DOM
+            const commentElement = document.querySelector(`[data-id="${id}"]`);
+            if (commentElement) {
+                commentElement.remove();
+            }
+        } else {
+            console.error('Failed to delete comment:', response.statusText);
         }
     })
     .catch(error => console.error('Error:', error));
