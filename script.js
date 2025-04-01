@@ -31,6 +31,7 @@ function displayComment(comment) {
     const commentsContainer = document.getElementById('comments-container');
     const commentElement = document.createElement('div');
     commentElement.className = 'comment';
+    commentElement.setAttribute('data-id', comment._id); // Ajouter l'attribut data-id pour la suppression
     commentElement.innerHTML = `
         <strong>${comment.name}</strong> (${new Date(comment.date).toLocaleString()})<br>
         <em>${comment.category}</em><br>
@@ -42,8 +43,14 @@ function displayComment(comment) {
 }
 
 function deleteComment(id) {
+    const username = 'admin'; // Changez par votre nom d'utilisateur
+    const password = 'password'; // Changez par votre mot de passe
+
     fetch(`http://localhost:3000/api/suggestions/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+            'Authorization': 'Basic ' + btoa(username + ':' + password)
+        }
     })
     .then(() => {
         // Supprimer le commentaire du DOM
