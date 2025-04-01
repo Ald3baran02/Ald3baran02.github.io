@@ -35,9 +35,24 @@ function displayComment(comment) {
         <strong>${comment.name}</strong> (${new Date(comment.date).toLocaleString()})<br>
         <em>${comment.category}</em><br>
         <p>${comment.suggestion}</p>
+        <button onclick="deleteComment('${comment._id}')">Supprimer</button>
         <hr>
     `;
     commentsContainer.appendChild(commentElement);
+}
+
+function deleteComment(id) {
+    fetch(`http://localhost:3000/api/suggestions/${id}`, {
+        method: 'DELETE'
+    })
+    .then(() => {
+        // Supprimer le commentaire du DOM
+        const commentElement = document.querySelector(`[data-id="${id}"]`);
+        if (commentElement) {
+            commentElement.remove();
+        }
+    })
+    .catch(error => console.error('Error:', error));
 }
 
 // Charger les commentaires existants depuis le backend
