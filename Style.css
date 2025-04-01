@@ -23,12 +23,13 @@ nav ul {
     padding: 0;
     margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
 
 nav ul li {
-    display: inline-block;
+    display: flex;
 }
 
 nav ul li a {
