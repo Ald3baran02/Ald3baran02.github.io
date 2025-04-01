@@ -15,8 +15,8 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    text-align: center;
     padding-bottom: 50px;
+    text-align: center;
 }
 
 header, footer {
@@ -27,7 +27,6 @@ header, footer {
     position: relative;
 }
 
-/* Style pour l'encart de version */
 .version-box {
     position: absolute;
     top: 10px;
@@ -71,14 +70,12 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Footer Section */
 footer p {
     margin: 0;
     font-size: 14px;
 }
 
-/* Add responsive design for text boxes */
-input[type="text"], textarea {
+input[type="text"], select, textarea {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -89,14 +86,29 @@ input[type="text"], textarea {
     font-size: 1rem;
 }
 
-/* Handle overflow for text boxes */
-input[type="text"], textarea {
-    overflow: auto;
+button[type="submit"] {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-/* Ensure text boxes are not out of screen */
-@media (max-width: 768px) {
-    input[type="text"], textarea {
-        width: 100%;
-    }
+button[type="submit"]:hover {
+    background: #005bb5;
+}
+
+section#suggestions, section#comments {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#comments-container {
+    margin-top: 20px;
 }
