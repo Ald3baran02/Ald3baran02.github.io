@@ -43,8 +43,8 @@ function displayComment(comment) {
 }
 
 function deleteComment(id) {
-    const username = 'ald3baran0'; // Changez par votre nom d'utilisateur
-    const password = '28082017M'; // Changez par votre mot de passe
+    const username = 'Ald3baran02'; // Remplacez par votre nom d'utilisateur
+    const password = '28082017Mn'; // Remplacez par votre mot de passe
 
     fetch(`http://localhost:3000/api/suggestions/${id}`, {
         method: 'DELETE',
