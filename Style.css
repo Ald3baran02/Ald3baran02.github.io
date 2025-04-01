@@ -1,18 +1,26 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --primary-color: #0073e6;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --font-family: 'Roboto', Arial, sans-serif;
+}
+
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     text-align: center;
+    padding-bottom: 50px;
 }
 
-header {
-    background: #0073e6;
+header, footer {
+    background: var(--primary-color);
     color: white;
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -28,6 +36,12 @@ nav ul {
     gap: 15px;
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
 nav ul li {
     display: flex;
 }
@@ -37,35 +51,20 @@ nav ul li a {
     background: white;
     padding: 10px 20px;
     border-radius: 5px;
-    color: #0073e6;
+    color: var(--primary-color);
     font-weight: bold;
     transition: background 0.3s, color 0.3s, transform 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li a:hover {
-    background: #0073e6;
+    background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
 }
 
 /* Footer Section */
-footer {
-    background: #0073e6;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
 footer p {
     margin: 0;
     font-size: 14px;
-}
-
-/* Add some padding to the body to prevent content from being hidden behind the fixed footer */
-body {
-    padding-bottom: 50px;
 }
