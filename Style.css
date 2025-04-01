@@ -1,5 +1,8 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -7,29 +10,61 @@ body {
     color: #333;
     text-align: center;
 }
+
 header {
     background: #0073e6;
     color: white;
     padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
+
 nav ul li {
     display: inline-block;
-    margin: 10px;
 }
+
 nav ul li a {
     text-decoration: none;
     background: white;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     color: #0073e6;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 nav ul li a:hover {
     background: #0073e6;
     color: white;
+    transform: translateY(-2px);
+}
+
+/* Footer Section */
+footer {
+    background: #0073e6;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Add some padding to the body to prevent content from being hidden behind the fixed footer */
+body {
+    padding-bottom: 50px;
 }
