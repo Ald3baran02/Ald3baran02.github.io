@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="style.css"> <!-- Assurez-vous que le chemin vers votre fichier CSS est correct -->
 </head>
 <body>
-    <header>
-        <h1>Bibliographie Thématique</h1>
-        <div class="version-box">V1.1</div>
-    </header>
+    <div id="header"></div>
     <nav>
         <ul>
             <li><a href="Physique.html">Physique</a></li>
@@ -18,8 +15,22 @@
             <li><a href="Montage.html">Montage</a></li>
         </ul>
     </nav>
-    <footer>
-        <p>&copy; 2025 Bibliographie Thématique</p>
-    </footer>
+    <div id="footer"></div>
+
+    <script>
+        // Charger le header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Charger le footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
