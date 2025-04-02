@@ -7,18 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Chimie</h1>
-        <div class="version-box">V1.1</div>
-    </header>
+    <div id="header"></div>
     <nav>
         <ul>
-            <li><a href="CO.html">Chimie Organique</a></li>
-            <li><a href="CG.html">Chimie Générale</a></li>
+            <li><a href="chimie_organique.html">Chimie Organique</a></li>
+            <li><a href="chimie_generale.html">Chimie Générale</a></li>
         </ul>
     </nav>
-    <footer>
-        <p>&copy; 2025 Bibliographie Thématique</p>
-    </footer>
+    <div id="footer"></div>
+
+    <script>
+        // Charger le header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Charger le footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
