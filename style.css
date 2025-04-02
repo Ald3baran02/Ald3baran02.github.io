@@ -58,7 +58,7 @@ nav ul li a {
     background: white;
     padding: 10px 20px;
     border-radius: 5px;
-    color: var (--primary-color);
+    color: var(--primary-color);
     font-weight: bold;
     transition: background 0.3s, color 0.3s, transform 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -124,4 +124,21 @@ ul.book-list {
 
 ul.book-list li {
     margin: 0.5em 0;
+}
+
+/* Style for the back button */
+.back-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #005bb5;
 }
