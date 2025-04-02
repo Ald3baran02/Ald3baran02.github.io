@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="header"></div>
+    <div id="back-button"></div>
     <nav>
         <ul>
             <li><a href="EM.html">Électromagnétisme</a></li>
@@ -36,6 +37,12 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
+            });
+        // Charger le bouton retour
+        fetch('back-button.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('back-button').innerHTML = data;
             });
 
         // Charger le footer
