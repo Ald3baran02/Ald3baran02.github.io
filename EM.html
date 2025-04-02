@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="header"></div>
+    <div id="back-button"></div>
     <article>
         <section>
             <h2>Livre de cours / exercices</h2>
@@ -27,6 +28,13 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
+            });
+
+        // Charger le bouton retour
+        fetch('back-button.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('back-button').innerHTML = data;
             });
 
         // Charger le footer
