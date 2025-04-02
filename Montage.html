@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header"></div>
+    <div id="header0"></div>
     <div id="back-button"></div>
 
     <nav>
@@ -19,10 +19,10 @@
 
     <script>
         // Charger le header
-        fetch('header.html')
+        fetch('header0.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('header').innerHTML = data;
+                document.getElementById('header0').innerHTML = data;
             });
         // Charger le bouton retour
         fetch('back-button.html')
