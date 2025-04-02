@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="back-button"></div>
 
+    <nav>
+        <ul>
+            <li><a href="M1.html">M1</a></li>
+        </ul>
+    </nav>
+    <div id="footer"></div>
+
+    <script>
+        // Charger le header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+        // Charger le bouton retour
+        fetch('back-button.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('back-button').innerHTML = data;
+            });
+        
+        // Charger le footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
